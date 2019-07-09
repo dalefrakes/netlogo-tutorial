@@ -3,8 +3,8 @@ title: "Intro to Agent-Based Modeling (ABM) through Modeling Mass Opinion Dynami
 author: "Dale Frakes"
 date: "9 July 2019"
 output:
-  ioslides_presentation: default
   beamer_presentation: default
+  ioslides_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -48,7 +48,6 @@ I would like to thank the following for making this tutorial possible:
 
 ## About the Presenter
 
-
 Dale Frakes is a Ph.D. candidate in the Systems Science program at Portland State University, working under Dr. Wayne Wakeland. He developed and teaches a course, *Modeling & Simulation with R & Python* as well as teaching the program’s course in Agent Based Modeling. He is currently working with two academic teams applying computer modeling to research on “Fake News” and Intergenerational Obesity.
 
 ![](./img/DaleFrakes.png)
@@ -63,6 +62,47 @@ Dale Frakes is a Ph.D. candidate in the Systems Science program at Portland Stat
 * extracting data from runs of NetLogo models for analysis in other tools (e.g. R, Python, Excel, etc.) using Behavior Space or exporting directly to CSV from model code
 * comparing model code written in other languages (e.g. Fortran) with code in NetLogo
 * accessing models and code stored on a Git repository
+
+## Questions?
+
+This is a working tutorial, so feel free to ask questions as we go.
+
+## Agent Based Models: Key Features
+* Designed from the bottom-up
+* The behaviors of agents/individuals are programmed
+* There can be different kinds of agents (homogeneity)
+* How the agents interact with one-another is of particular interest
+* Data can be collected, aggregated, and analyzed
+* Considered to be “generative” (can complex behaviors arise from simple rules?)
+* Can help find a “minimum required rules for a phenomena (but can’t prove these are THE rules)
+
+## Agent-Based Modeling:  Different from other Modeling
+
+They differ from other common modeling methods that tend to be top-down (e.g. statistical models, system dynamics, discrete-event, monte-carlo, etc.)
+
+
+## Intro to NetLogo
+
+![](./img/NetLogo.png)
+
+## NetLogo:  Key Features
+
+* Model Library
+* Interface Tab
+    * "the world"
+    * adding buttons, sliders, etc.
+    * speed, viewing updates
+    * "command center"
+    * watching turtles and patches
+* Info Tab
+* Code Tab
+
+## Building Models
+
+Now we'll work from the tutorial file.
+
+
+## Last Questions?
 
 ## Thank You!
 
