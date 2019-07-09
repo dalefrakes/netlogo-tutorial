@@ -131,9 +131,54 @@ Note:
 $$ opinion_i(t + 1) = opinion_i(t) + u(opinion_j(t) - opinion_i(t)) $$
 $$ opinion_j(t + 1) = opinion_j(t) + u(opinion_i(t) - opinion_j(t)) $$
 
+![](./img/04-simple-global-threshold.png)
+
 And the corresponding code block looks like this.
 `r  filename <- '04-simple-global-threshold.nlogo'`
 **File: `r filename`:**
 ```{r comment='', echo=FALSE}
 show_netlogo_file(filename)
 ```
+
+
+
+### Adding a Histogram
+
+It's more useful to see a histogram of opinions.
+
+![](./img/05-simple-global-threshold-plot.png)
+
+The code pieces there look like this:
+
+Plot Setup Commands:
+```
+set-plot-x-range -1 1
+set-plot-y-range 0 count turtles
+set-histogram-num-bars 10
+```
+
+Pen Update commands:
+```
+histogram [opinion] of turtles
+```
+
+Which will give us somthing like this:
+![](./img/05-simple-global-threshold-plot-b.png)
+
+05-simple-global-threshold-plot-b.nlogo
+
+## Different Probability Distributions
+
+The initial population's opinion might not best be described by a uniform distribution.  Next we'll look at how to explore using different distributions.
+
+And the corresponding code block looks like this.
+`r  filename <- '06-with_probability_distributions.nlogo'`
+**File: `r filename`:**
+```{r comment='', echo=FALSE}
+show_netlogo_file(filename)
+```
+
+
+# Continuing in Ad-Lib Mode
+
+We'll continue the rest of this tutorial in an ad-lib mode.
