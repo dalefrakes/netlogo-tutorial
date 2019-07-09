@@ -25,22 +25,6 @@ NetLogo) and would like to develop their skills with an interesting social scien
 who have some ABM experience and would like to explore a few ways of modeling opinion dynamics
 using ABM.
 
-## Acknowledgements
-
-I would like to thank the following for making this tutorial possible:
-
-* SBP-BRiMS and its organizers, particularly Dr. Kathleen Carley
-* Dr. Wayne Wakeland, my PhD advisor at Portland State University
-* Dr. William Burns, of Decision Research
-
-## About the Presenter
-
-Dale Frakes is a Ph.D. candidate in the Systems Science program at Portland State University, working
-under Dr. Wayne Wakeland. He developed and teaches a course, “Modeling & Simulation with R &
-Python” as well as teaching the program’s course in Agent Based Modeling. He is currently working
-with two academic teams applying computer modeling to research on “Fake News” and
-Intergenerational Obesity.
-
 ## Tutorial Materials
 
 ### NetLogo
@@ -53,21 +37,33 @@ The NetLogo model files and presentation materials are available from GitHub:
 
 <https://github.com/dalefrakes/netlogo-tutorial>
 
-## Slide with Bullets
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Acknowledgements
 
-## Slide with R Output
+I would like to thank the following for making this tutorial possible:
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+* SBP-BRiMS and its organizers, particularly Dr. Kathleen Carley
+* Dr. Wayne Wakeland, my PhD advisor at Portland State University
+* Dr. William Burns, of Decision Research
 
-## Slide with Plot
+## About the Presenter
 
-```{r pressure}
-plot(pressure)
-```
 
+Dale Frakes is a Ph.D. candidate in the Systems Science program at Portland State University, working under Dr. Wayne Wakeland. He developed and teaches a course, *Modeling & Simulation with R & Python* as well as teaching the program’s course in Agent Based Modeling. He is currently working with two academic teams applying computer modeling to research on “Fake News” and Intergenerational Obesity.
+
+![](./img/DaleFrakes.png)
+
+## Topics Covered in this Tutorial
+
+* the Zaller-Deffuant model of mass opinion (and variations)
+* translating mathematical statements into NetLogo code
+* building models incrementally, adding complexity in successive steps (e.g. “always have a working model)
+* exploring different ways of drawing random numbers from various distributions in NetLogo
+* using NetLogo’s network capabilities to build network-based models
+* extracting data from runs of NetLogo models for analysis in other tools (e.g. R, Python, Excel, etc.) using Behavior Space or exporting directly to CSV from model code
+* comparing model code written in other languages (e.g. Fortran) with code in NetLogo
+* accessing models and code stored on a Git repository
+
+## Thank You!
+
+Thank you for attending this presentation.  Feel free to contact me if you have any later questions:  <dfrakes@pdx.edu>.

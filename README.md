@@ -20,7 +20,7 @@ Attendees should leave the tutorial with basic competence in using NetLogo. Addi
 * building models incrementally, adding complexity in successive steps (e.g. “always have a working model)
 * exploring different ways of drawing random numbers from various distributions in NetLogo
 * using NetLogo’s network capabilities to build network-based models
-* extracting data from runs of NetLogo models for analysis in other tools (e.g. R, Python, Excel, etc.) using Behaivor Space or exporting directly to CSV from model code
+* extracting data from runs of NetLogo models for analysis in other tools (e.g. R, Python, Excel, etc.) using Behavior Space or exporting directly to CSV from model code
 * comparing model code written in other languages (e.g. Fortran) with code in NetLogo
 * accessing models and code stored on a Git repository
 
