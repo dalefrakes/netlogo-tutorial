@@ -1,0 +1,139 @@
+---
+title: "Tutorial:  Intro to Agent-Based Modeling (ABM) through Modeling Mass Opinion Dynamics"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r comment='', echo=FALSE}
+show_netlogo_file <- function(filename) {
+  #filename <- '00-base_template.nlogo'
+  
+  #cat(paste(c('FILE: ', filename)), sep = '\n')
+  
+  src <- readLines(filename )
+  lastline <- match('@#$#@#$#@', src)
+  cat(src[1:(lastline-1)], sep = '\n')
+}
+
+```
+***
+# Getting Started
+
+## Acknowledgements:
+
+This tutorial was prepared for the 2019 SBP-BRiMS conference (<http://sbp-brims.org/2019/>) based on research done with Dr. William Burns of Decision Research (<https://www.decisionresearch.com/>).
+
+## Materials
+
+* Download and Install Netlogo:  <https://ccl.northwestern.edu/netlogo/>
+
+* Obtain these tutorial files: <https://github.com/dalefrakes/netlogo-tutorial>
+
+* Paper: _Extremism without extremists: Deffuant model with emotions_ (Pawel Sobkowicz) <https://www.frontiersin.org/articles/10.3389/fphy.2015.00017/full>
+
+***
+ 
+# Writing Your First Models
+
+## A Basic Template for Nearly Every Model
+
+A newly started NetLogo model has no buttons nor any code.  But in my experience, nearly every model has a `setup` and `go` buttons.  Likewise, there are `to setup` and `to go` procedures to go with those buttons.  Most models also tend to have some `global`, `patch`, and `turtle` variables.
+
+Instead of creating these items every time I start a model, I like to have a basic template to start from.  Such a template might look like this:
+
+![](./img/00-base_template.png)
+
+And the corresponding code block looks like this.
+`r  filename <- '00-base_template.nlogo'`
+**File: `r filename`:**
+```{r comment='', echo=FALSE}
+show_netlogo_file(filename)
+```
+
+Note that this NetLogo model does pretty much nothing except clear the environment.
+
+To use this template, open it up and `save-as` using the name you want for your new model.
+
+## A Basic Template that *Does Something*
+
+Many models feature a population of turtles that randomly move around.  So this slightly more advanced template adds a slider to provide the count of the population, along with code in the `setup` procedure to create that population (and randomly place them in the world).  It also adds a new `wiggle` procedure that causes the turtles to randomly turn a bit, along with code in the `go` procedure to ask the turtles to `wiggle` then move forward.
+
+Things to note:
+
+* sliders show up as `global` variables, but they're defined in the interace and not in the code itself)
+* the `wiggle` procedure was borrowed from the `Ants` model that can be found in the Model Library - the Model Library is an excellent source of ways to solve a huge variety of problems
+* `wiggle` works by having the turtles turn to the right at a random angle up to 40 degrees, then to the left at another random angle up to 40 degrees.
+
+
+![](./img/01-base_template_moving_population.png)
+
+And the corresponding code block looks like this.
+`r  filename <- '01-base_template_moving_population.nlogo'`
+**File: `r filename`:**
+```{r comment='', echo=FALSE}
+show_netlogo_file(filename)
+```
+
+
+
+
+
+
+# A First Population Opinion Model
+
+For our first model that exhibits some Population Opinion Dynamics, we'll start by considering some of the models described in a paper by Pawel Sobkowicz of the National Centre for Nuclear Research, Warsaw, Poland, "Extremism without extremists: Deffuant model with emotions", published in Frontiers in Physics in 2015.
+
+(https://www.frontiersin.org/articles/10.3389/fphy.2015.00017/full)
+
+## Opinions, Thresholds, and Exchanges
+
+
+### Things to Consider (Leading to Variables!)
+
+From the description of the model in the paper, we can start to think about what might be needed to implement a NetLogo model.  
+
+First let's consider the agents:
+
+* there's only one type of turtle (e.g. a person), so there's no need to make new `breeds`
+* a person has an opinion ($person_i$ has an opinion $o_i$)
+
+Next, let's think about global variables.  The paper mentions a threshold $d$ and an convergence rate $u$.  Since both of these can take on a range of values set by the model's user, it makes sense to make these into sliders.
+
+It also might be helpful to define some hard limits like the bounds of opinion (-1 to 1) as global variables that are managed strictly within the code.
+
+And while the agents wil move around and encounter one another randomly, there's no information needed about where they are, so we won't need any patch variables.
+
+Setting up these variables, we have something that looks like this:
+
+
+![](./img/03-simple-global-threshold.png)
+
+And the corresponding code block looks like this.
+`r  filename <- '03-simple-global-threshold.nlogo'`
+**File: `r filename`:**
+```{r comment='', echo=FALSE}
+show_netlogo_file(filename)
+```
+
+Note:
+
+* the opinions of turtles are set randomly, drawing from a uniform distribution (`random-float`)
+* the shape of the turtles were changed to `people`
+* we've added a turtle procedure to set their color based on the sign and intensity of their opinions
+
+### Now the Interactions
+
+$$ opinion_i(t + 1) = opinion_i(t) + u(opinion_j(t) - opinion_i(t)) $$
+$$ opinion_j(t + 1) = opinion_j(t) + u(opinion_i(t) - opinion_j(t)) $$
+
+And the corresponding code block looks like this.
+`r  filename <- '04-simple-global-threshold.nlogo'`
+**File: `r filename`:**
+```{r comment='', echo=FALSE}
+show_netlogo_file(filename)
+```

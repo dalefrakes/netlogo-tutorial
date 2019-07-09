@@ -2,7 +2,9 @@
 title: "Intro to Agent-Based Modeling (ABM) through Modeling Mass Opinion Dynamics"
 author: "Dale Frakes"
 date: "9 July 2019"
-output: ioslides_presentation
+output:
+  ioslides_presentation: default
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -22,6 +24,22 @@ This tutorial is aimed at two groups: 1) people who have little experience with 
 NetLogo) and would like to develop their skills with an interesting social science problem, 2) people
 who have some ABM experience and would like to explore a few ways of modeling opinion dynamics
 using ABM.
+
+## Acknowledgements
+
+I would like to thank the following for making this tutorial possible:
+
+* SBP-BRiMS and its organizers, particularly Dr. Kathleen Carley
+* Dr. Wayne Wakeland, my PhD advisor at Portland State University
+* Dr. William Burns, of Decision Research
+
+## About the Presenter
+
+Dale Frakes is a Ph.D. candidate in the Systems Science program at Portland State University, working
+under Dr. Wayne Wakeland. He developed and teaches a course, “Modeling & Simulation with R &
+Python” as well as teaching the program’s course in Agent Based Modeling. He is currently working
+with two academic teams applying computer modeling to research on “Fake News” and
+Intergenerational Obesity.
 
 ## Tutorial Materials
 
