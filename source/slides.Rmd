@@ -42,7 +42,7 @@ The NetLogo model files and presentation materials are available from GitHub:
 
 I would like to thank the following for making this tutorial possible:
 
-* SBP-BRiMS and its organizers, particularly Dr. Kathleen Carley
+* SBP-BRiMS and its organizers, particularly Dr. Kathleen Carley, Dr. Nitin Argarwal, and Dr. David Broniatowski
 * Dr. Wayne Wakeland, my PhD advisor at Portland State University
 * Dr. William Burns, of Decision Research
 
