@@ -1,0 +1,55 @@
+---
+title: "Intro to Agent-Based Modeling (ABM) through Modeling Mass Opinion Dynamics"
+author: "Dale Frakes"
+date: "9 July 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About This Tutorial Session
+
+### Description
+This tutorial session will demonstrate building some basic agent-based models (ABM) of population
+opinion dynamics in NetLogo. It will start by exploring various published opinion dynamics models
+(e.g. Zaller-Deffuant model). It will then continue with specific NetLogo topics such as implementing
+network models and extracting data from models for analysis.
+
+### Who Should Attend?
+This tutorial is aimed at two groups: 1) people who have little experience with ABM (particularly
+NetLogo) and would like to develop their skills with an interesting social science problem, 2) people
+who have some ABM experience and would like to explore a few ways of modeling opinion dynamics
+using ABM.
+
+## Tutorial Materials
+
+### NetLogo
+This tutorial uses NetLogo, a popular, user-friendly, and open-source system for developing Agent Based Models.  It's freely available from Northwestern University:
+
+<https://ccl.northwestern.edu/netlogo/>.
+
+### Tutorial Files
+The NetLogo model files and presentation materials are available from GitHub:
+
+<https://github.com/dalefrakes/netlogo-tutorial>
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
